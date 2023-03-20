@@ -40,6 +40,7 @@ function getRandomQuote() {
   
     //THE (I) BELOW IS JUST A PLACEHOLDER TO GET GIT TO PUSH
     //A function to link to search button to handle the click
+    
     function searchButton(event) {
         var btn = document.querySelector(i);
         btn.addEventListener('click', searchButton);
