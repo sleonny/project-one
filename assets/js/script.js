@@ -1,3 +1,4 @@
+
 function getRandomQuote() {
     // Set the API endpoint URL
     var urlQuote = "https://quote-garden.onrender.com/api/v3/quotes/random";
@@ -55,3 +56,4 @@ function getRandomQuote() {
         var partOfSpeech = data.partOfSpeech;
         var displaypartofSpeech = document;
     
+
