@@ -42,7 +42,7 @@ function getRandomQuote() {
       .catch(error => console.error(error));
   })}
   
-  getDefinition();
+  // getDefinition();
   
   
 
@@ -50,7 +50,10 @@ function getRandomQuote() {
 
 
 //BELOW NEED TO BRACKET AND ATTACH HTML ELEMENT TO END OF DOCUMENT.
-    displayResults(data) 
+
+displayResults(data) {
+
+}
         var word = data.word;
         var displayWord = document;
         var orgin = data.orgin;
@@ -60,4 +63,19 @@ function getRandomQuote() {
         var partOfSpeech = data.partOfSpeech;
         var displaypartofSpeech = document;
     
+var saveButton = document.querySelector('#quote-save-btn');
+var input = document.querySelector('#input');
+
+
+
+function saveData() {
+  console.log(input)
+  localStorage.setItem("value", input.value);
+  var data = localStorage.getItem("value");
+  console.log(data);
+
+}
+
+saveButton.addEventListener("click", saveData);
+
 
