@@ -31,7 +31,7 @@ function getRandomQuote() {
       event.preventDefault(); 
       const searchForm = document.getElementById('search-form');
       var searchTerm = document.getElementById('search-input').value;
-      var urlDictionary = "https://api.dictionaryapi.dev/api/v2/entries/en/dogs";
+      var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
       fetch(urlDictionary)
       .then(response => response.json())
       .then(data => {
