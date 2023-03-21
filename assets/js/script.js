@@ -25,26 +25,29 @@ function getRandomQuote() {
 
   
   function getDefinition() {
-    // var urlDictionary = "https://api.dictionaryapi.dev/api/v2/entries/en/<word>" NEED TO LINK TO INDEX.HTML
-    fetch(urlDictionary)
-    .then(response => response.json())
-    .then(data => {
-      // Get Definition of Word
-      var definition = data.data[0];
-      console.log(definition);
-    })
-    .catch(error => console.error(error));
-  }
+     
+    searchForm.addEventListener('submit', event => {
+      event.preventDefault(); 
+      const searchForm = document.getElementById('search-form');
+      var searchTerm = document.getElementById('search-input').value;
+      var urlDictionary = "https://api.dictionaryapi.dev/api/v2/entries/en/dogs";
+      fetch(urlDictionary)
+      .then(response => response.json())
+      .then(data => {
+        // Get Definition of Word
+        var definition = data.data[0];
+        console.log(definition);
+      })
+      .catch(error => console.error(error));
+  })}
   
   getDefinition();
   
-    //THE (I) BELOW IS JUST A PLACEHOLDER TO GET GIT TO PUSH
-    //A function to link to search button to handle the click
-    
-    function searchButton(event) {
-        var btn = document.querySelector(i);
-        btn.addEventListener('click', searchButton);
-    }
+  
+
+
+
+
 //BELOW NEED TO BRACKET AND ATTACH HTML ELEMENT TO END OF DOCUMENT.
     displayResults(data) 
         var word = data.word;
