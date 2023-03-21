@@ -24,7 +24,7 @@ function getRandomQuote() {
   getRandomQuote();
 
 
-  
+      
   function getDefinition() {
      
     searchForm.addEventListener('submit', event => {
