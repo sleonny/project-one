@@ -12,7 +12,18 @@
   </head>
   
     <header>
-      <h1><u>"Your Daily Quotes"</u></h1>
+    
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">"Your Daily Quotes"</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+      
     </header>
     
     <body>
@@ -36,29 +47,30 @@
             <i class="material-icons right"></i>
           </button>
     
-         main
+         
         </div>
        
     </body>
 
     <div id="dictionary">
-      <h4>"Definition of quote:"</h4>
+      <h4>Meaning of word from quote:</h4>
     </div>
     <hr>
     <br>
     <br>
 
     <footer id="storage">
-      <h4>"Save Quote"</h4>
+      <h4>Save word and meaning here:</h4>
       <label>
-        <input
+        <input id="input"
         type="text"
         placeholder="Save quote here"
         aria-describedby="exampleHelpText"
         />
       </label>
-
-      <button type="submit">Save</button>
+      <a class="waves-effect waves-light btn-small" id="quote-save-btn">
+        <i class="material-icons right"></i>Save</a>
+      
     </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

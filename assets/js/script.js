@@ -36,23 +36,37 @@ function getRandomQuote() {
       //})
       //.catch(error => console.error(error));
   //})}
+
   
-  //getDefinition();
-  
   
 
 
 
 
-//BELOW NEED TO BRACKET AND ATTACH HTML ELEMENT TO END OF DOCUMENT.
-   // displayResults(data) 
-        var word = data.word;
+
         var displayWord = document;
         var orgin = data.orgin;
         var displayOrgin = document;
         var meanings = data.meanings;
         var displayMeanings = document;
         var partOfSpeech = data.partOfSpeech;
-        var displaypartofSpeech = document;
+        var displaypartofSpeech = document;*/
     
+var saveButton = document.querySelector('#quote-save-btn');
+var input = document.querySelector('#input');
+
+
+
+function saveData() {
+  
+  localStorage.setItem("value", input.value);
+  var data = localStorage.getItem("value");
+  console.log(data);
+
+}
+
+saveButton.addEventListener("click", saveData);
+        
+        
+
 
