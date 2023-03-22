@@ -29,35 +29,47 @@
     <body>
         <div class="container">
           <div class="qoutes">
-            <p>Generated Daily Quotes here:</p>
+            <h1>Generated Daily Quotes!</h1>
           <div id="quote-search">     
          
             <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <textarea id="textarea1" class="materialize-textarea"></textarea>
-                      <label for="textarea1"></label>
+                <div class="col s12 m6">
+                  <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Quotes:</span>
+                      <p></p>
+                    </div>
+                    <div id="textarea1"
+                     class="card-action">
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
-          </div> 
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right"></i>
-          </button>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Send
+              <i class="material-icons right"></i>
+              </button>
     
          
         </div>
        
     </body>
 
-    <div id="dictionary">
-      <h4>Meaning of word from quote:</h4>
-    </div>
+    <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Meaning of Word:</span>
+              <p></p>
+            </div>
+            <div id="definition"
+             class="card-action">
+            </div>
+          </div>
+        </div>
+      </div>
     <hr>
     <br>
-    <br>
+    
 
     <footer id="storage">
       <h4>Save word and meaning here:</h4>
