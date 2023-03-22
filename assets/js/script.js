@@ -11,13 +11,8 @@ function getRandomQuote() {
         var quote = data.data[0];
         console.log(`${quote.quoteText} - ${quote.quoteAuthor}`);
      
-     var resultsDiv = document.getElementById('quote-search');
-     var quoteText = document.createElement('p');
-     quoteText.innerHTML = quote.quoteText;
-     var quoteAuthor = document.createElement('p');
-     quoteAuthor.innerHTML = quote.quoteAuthor;
-     resultsDiv.appendChild(quoteText);
-     resultsDiv.appendChild(quoteAuthor);
+        var textarea = document.getElementById('textarea1');
+        textarea.value = quote.quoteText;
        }) }
   
   // Call the function to retrieve a random quote
@@ -25,34 +20,30 @@ function getRandomQuote() {
 
 
       
-  function getDefinition() {
+ // function getDefinition() {
      
-    searchForm.addEventListener('submit', event => {
-      event.preventDefault(); 
-      const searchForm = document.getElementById('search-form');
-      var searchTerm = document.getElementById('search-input').value;
-      var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
-      fetch(urlDictionary)
-      .then(response => response.json())
-      .then(data => {
+   // searchForm.addEventListener('submit', event => {
+     // event.preventDefault(); 
+      //const searchForm = document.getElementById('search-form');
+      //var searchTerm = document.getElementById('search-input').value;
+      //var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
+      //fetch(urlDictionary)
+      //.then(response => response.json())
+      //.then(data => {
         // Get Definition of Word
-        var definition = data.data[0];
-        console.log(definition);
-      })
-      .catch(error => console.error(error));
-  })}
+        //var definition = data.data[0];
+        //console.log(definition);
+      //})
+      //.catch(error => console.error(error));
+  //})}
+
   
-  // getDefinition();
-  
   
 
 
 
 
-//BELOW NEED TO BRACKET AND ATTACH HTML ELEMENT TO END OF DOCUMENT.
 
-//  displayResults(data)
-       /* var word = data.word;
         var displayWord = document;
         var orgin = data.orgin;
         var displayOrgin = document;
