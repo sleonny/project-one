@@ -1,4 +1,7 @@
 
+
+
+
 function getRandomQuote() {
     // Set the API endpoint URL
     var urlQuote = "https://quote-garden.onrender.com/api/v3/quotes/random";
@@ -20,24 +23,24 @@ function getRandomQuote() {
 
 
       
- // function getDefinition() {
-     
-   // searchForm.addEventListener('submit', event => {
-     // event.preventDefault(); 
-      //const searchForm = document.getElementById('search-form');
-      //var searchTerm = document.getElementById('search-input').value;
-      //var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
-      //fetch(urlDictionary)
-      //.then(response => response.json())
-      //.then(data => {
-        // Get Definition of Word
-        //var definition = data.data[0];
-        //console.log(definition);
-      //})
-      //.catch(error => console.error(error));
-  //})}
+  function getDefinition() {
+  var searchForm = document.getElementById() 
+  searchForm.addEventListener('submit', event => {
+  event.preventDefault(); 
+ const searchForm = document.getElementById('search-form');
+ var searchTerm = document.getElementById('search-input').value;
+ var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
+ fetch(urlDictionary)
+ .then(response => response.json())
+ .then(data => {
+ // Get Definition of Word
+ var definition = data.data[0];
+ console.log(definition);
+ })
+ .catch(error => console.error(error));
+ })}
   
-  //getDefinition();
+ getDefinition();
   
   
 
