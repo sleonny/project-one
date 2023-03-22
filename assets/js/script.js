@@ -50,7 +50,7 @@ function getRandomQuote() {
         var meanings = data.meanings;
         var displayMeanings = document;
         var partOfSpeech = data.partOfSpeech;
-        var displaypartofSpeech = document;*/
+        var displaypartofSpeech = document;
     
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
