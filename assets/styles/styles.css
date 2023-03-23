@@ -1,3 +1,5 @@
+
+
 #quote-search input{
     background-color:  rgb(184, 255, 255); 
     color: black;
@@ -39,6 +41,3 @@ ul {
     background-color: #111;
   }
   
-  .active {
-    background-color: #4CAF50;
-}
