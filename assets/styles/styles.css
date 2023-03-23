@@ -11,10 +11,7 @@
     width: 450px;
 }
 
-body {
-    display: block;
-    justify-content: center;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
