@@ -48,19 +48,11 @@ function getDefinition() {
       var displayDefinition = document.getElementById('definition');
       displayDefinition.textContent = definitionString;
     })
+    
     .catch(error => console.error(error));
 }
 
    
-
-
-
-
-
-
-
-
-
 
   
 var saveButton = document.querySelector('#quote-save-btn');
