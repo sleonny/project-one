@@ -22,24 +22,36 @@ function getRandomQuote() {
 // Call the function to retrieve a random quote
 getRandomQuote();
 
+var button = document.getElementById('search');
 
-    
-// function getDefinition() {
+button.addEventListener('click', function() {
+  // Call your function here
+  getDefinition();
+});
+
+
+function getDefinition() {
+  console.log("getDefinition function called"); 
+     var word = document.getElementById('search').value;
+     console.log(`word value: ${word}`);
+    var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`;
+    console.log(urlDictionary);
+    fetch(urlDictionary)
+    .then(response => response.json())
+    .then(data => {
+      var definitions = data[0].meanings[0].definitions;
+      var definitionString = '';
+      definitions.forEach(function(definition, index) {
+        definitionString += `${index + 1}. ${definition.definition}\n`;
+      });
+      console.log(definitionString);
+      var displayDefinition = document.getElementById('definition');
+      displayDefinition.textContent = definitionString;
+    })
+    .catch(error => console.error(error));
+}
+
    
- // searchForm.addEventListener('submit', event => {
-   // event.preventDefault(); 
-    //const searchForm = document.getElementById('search-form');
-    //var searchTerm = document.getElementById('search-input').value;
-    //var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(searchTerm)}`;
-    //fetch(urlDictionary)
-    //.then(response => response.json())
-    //.then(data => {
-      // Get Definition of Word
-      //var definition = data.data[0];
-      //console.log(definition);
-    //})
-    //.catch(error => console.error(error));
-//})}
 
 
 
@@ -48,13 +60,8 @@ getRandomQuote();
 
 
 
-      // var displayWord = document;
-      // var orgin = data.orgin;
-      // var displayOrgin = document;
-      // var meanings = data.meanings;
-      // var displayMeanings = document;
-      // var partOfSpeech = data.partOfSpeech;
-      // var displaypartofSpeech = document;
+
+
   
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
