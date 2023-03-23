@@ -44,13 +44,13 @@ function getRandomQuote() {
 
 
 
-        var displayWord = document;
+       /* var displayWord = document;
         var orgin = data.orgin;
         var displayOrgin = document;
         var meanings = data.meanings;
         var displayMeanings = document;
         var partOfSpeech = data.partOfSpeech;
-        var displaypartofSpeech = document;
+        var displaypartofSpeech = document;*/
     
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
