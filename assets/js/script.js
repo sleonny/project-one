@@ -9,10 +9,14 @@ function getRandomQuote() {
     .then(data => {
       // Print the quote to the console
       var quote = data.data[0].quoteText;
+      var author = data. data[0].quoteAuthor;
       console.log(`${quote}`);
+      
    
       var quoteElement = document.getElementById('quote');
       quoteElement.textContent = quote;
+      var authorElement = document.getElementById('author');
+      authorElement.textContent = author;
      }) }
 
 // Call the function to retrieve a random quote
