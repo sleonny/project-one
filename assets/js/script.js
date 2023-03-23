@@ -23,6 +23,7 @@ button.addEventListener('click', function() {
 
 
 
+
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
 
