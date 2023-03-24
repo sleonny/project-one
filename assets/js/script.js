@@ -8,14 +8,23 @@ function getRandomQuote() {
       var quote = data.data[0].quoteText;
       var author = data. data[0].quoteAuthor;
       console.log(`${quote}`);
+
         // Console log the quote to make sure it is loading correctly
+
       var quoteElement = document.getElementById('quote');
       quoteElement.textContent = quote;
       var authorElement = document.getElementById('author');
       authorElement.textContent = author;
+
         // Create variables for data and manipulate the DOM to display them
      }) 
 }
+
+     }) }
+
+// Call the function to retrieve a random quote
+getRandomQuote();
+
 
 getRandomQuote();
         // Call the function to retrieve a random quote
@@ -58,10 +67,36 @@ function getDefinition() {
   var span = document.getElementsByClassName('modal-close')[0];
           // Assign variables to navigate the DOM
 
+
 mbtn.onclick = function() {
   modal.style.display = 'block';
 }
          // Function to handle the modal button click
+
+function getDefinition() {
+  console.log("getDefinition function called"); 
+     var word = document.getElementById('search').value;
+     console.log(`word value: ${word}`);
+    var urlDictionary = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`;
+    console.log(urlDictionary);
+    fetch(urlDictionary)
+    .then(response => response.json())
+    .then(data => {
+      var definitions = data[0].meanings[0].definitions;
+      var definitionString = '';
+      definitions.forEach(function(definition, index) {
+        definitionString += `${index + 1}. ${definition.definition}\n`;
+      });
+      console.log(definitionString);
+      var displayDefinition = document.getElementById('definition');
+      displayDefinition.textContent = definitionString;
+    })
+    
+    .catch(error => console.error(error));
+}
+
+   
+
 
 span.onclick = function() {
   modal.style.display = 'none';
@@ -76,6 +111,10 @@ var para = document.querySelector('#saved-data');
 para.innerHTML = localStorage.getItem("value");
         // Retrieve local storage
 
+
+para.innerHTML = localStorage.getItem("value");
+
+
 function saveData() {
     localStorage.setItem("value", input.value);
     var data = localStorage.getItem("value");
@@ -84,12 +123,35 @@ function saveData() {
         // Console log to make sure data is being captured
 }
 
+
 function displayData() {
     localStorage.setItem("value", input.value);
     localStorage.getItem("value");
     para.innerHTML = localStorage.getItem("value");
         // Function to display saved local data on the DOM
+
+localStorage.setItem("value", input.value);
+var data = localStorage.getItem("value");
+console.log(data);
+
+
 }
+function displayData() {
+  
+  localStorage.setItem("value", input.value);
+  localStorage.getItem("value");
+  para.innerHTML = localStorage.getItem("value");
+
+
+}
+
+saveButton.addEventListener("click", function(){
+  saveData()
+  displayData()
+});
+      
+      
+
 
 saveButton.addEventListener("click", function(){
   saveData()
@@ -97,6 +159,7 @@ saveButton.addEventListener("click", function(){
 });
         // Function to handle the button click to save data
       
+
 
 
 
