@@ -56,8 +56,9 @@ function getDefinition() {
 
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
+var para = document.querySelector('#saved-data');
 
-
+para.innerHTML = localStorage.getItem("value");
 
 function saveData() {
 
@@ -66,8 +67,19 @@ var data = localStorage.getItem("value");
 console.log(data);
 
 }
+function displayData() {
+  
+  localStorage.setItem("value", input.value);
+  localStorage.getItem("value");
+  para.innerHTML = localStorage.getItem("value");
 
-saveButton.addEventListener("click", saveData);
+
+}
+
+saveButton.addEventListener("click", function(){
+  saveData()
+  displayData()
+});
       
       
 
