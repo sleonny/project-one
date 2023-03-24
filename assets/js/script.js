@@ -78,7 +78,7 @@ function getDefinition() {
 
    
 
-  
+
 var saveButton = document.querySelector('#quote-save-btn');
 var input = document.querySelector('#input');
 
@@ -98,3 +98,11 @@ saveButton.addEventListener("click", saveData);
 
 
 
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems, options);
+        });
+          
+              
+      
+      
