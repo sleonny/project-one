@@ -28,7 +28,32 @@ button.addEventListener('click', function() {
   getDefinition();
 });
 
-
+    // Get the modal element
+    var modal = document.getElementById('modal1');
+                  
+    // Get the button that opens the modal
+    var btn = document.querySelector('.modal-trigger');
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName('modal-close')[0];
+    
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = 'block';
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = 'none';
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+    
 function getDefinition() {
   console.log("getDefinition function called"); 
      var word = document.getElementById('search').value;
@@ -69,7 +94,7 @@ console.log(data);
 
 saveButton.addEventListener("click", saveData);
       
-      
+
 
 
 
