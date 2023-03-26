@@ -81,7 +81,7 @@ function saveData() {
     var data = localStorage.getItem("value");
     console.log(data);
         // Function to save data to local storage
-        // Console log to make sure data is being captured
+        // Console log to make sure data is being captured the correct way
 }
 
 function displayData() {
@@ -95,7 +95,7 @@ saveButton.addEventListener("click", function(){
   saveData()
   displayData()
 });
-        // Function to handle the button click to save data
+        // Function to handle the button click to save data locally
       
 
 
