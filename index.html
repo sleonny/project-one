@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <link rel="stylesheet" href="./assets/styles/styles.css" />
 
     <title>Daily Quotes!</title>
@@ -16,89 +13,46 @@
   
     <header>
 
-
-<!-- Modal Trigger -->
-<button data-target="modal1" class="btn modal-trigger">Modal</button>
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-<script src="/assets/js/script.js"></script>
-  
-    
-
- 
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-      <h1><u>"Your Daily Quotes"</u></h1>
     </header>
     
     <body>
         <div class="container">
           <div class="qoutes">
-            <p>Generated Daily Quotes here:</p>
+            <h1>Generated Daily Quotes!</h1>
           <div id="quote-search">     
-          JavaScript-/-Dictionary-API
-
+         
             <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <textarea id="textarea1" class="materialize-textarea"></textarea>
-                      <label for="textarea1">text a word from quote here...</label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-          </div> 
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="material-icons right"></i>
-          </button>
-    
-         main
+
         </div>
        
     </body>
 
-    <div id="dictionary">
-      <h4>"Definition of quote:"</h4>
-    </div>
+    <div class="row">
+        <div class="col s12 m6">
+
+            </div>
+            <div id="definition"
+             class="card-action">
+            </div>
+          </div>
+        </div>
+      </div>
     <hr>
     <br>
-    <br>
+    
 
     <footer id="storage">
-      <h4>"Save Quote"</h4>
+      <h4>Save word and meaning here:</h4>
       <label>
-        <input
+        <input id="input"
         type="text"
         placeholder="Save quote here"
         aria-describedby="exampleHelpText"
         />
       </label>
-
-      <button type="submit">Save</button>
+      <a class="waves-effect waves-light btn-small" id="quote-save-btn">
+        <i class="material-icons right"></i>Save</a>
+      
     </footer>
 
   
